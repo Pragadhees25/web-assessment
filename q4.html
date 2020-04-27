@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>login</title>
+</head>
+<body>
+<form action="#">
+  <table>
+    <div id="main">
+      <tr>
+        <td><h2>Login</h2><br>
+          <label>Name</label><br>
+        <input type="text" id="textbox" required>
+
+        </td>
+      </tr>
+      <tr>
+        <td><label>Password</label><br>
+          <input type="Password" id="psw" required>
+
+        </td>
+      </tr>
+      <tr>
+        <td><button id="sub" onclick="myFunction()">Submit</button></td>
+      </tr>
+      <div id="foot">
+        <tr>
+          <td><button onclick= "document.getElementById('main').style.display='none' ">Cancel</button></td>
+        </tr>
+      </div>
+    </div>
+  </table>
+  <script>
+    function myFunction(){
+    var x=document.getElementById("textbox").value;
+    var p=document.getElementById("psw").value;
+    if (x==""||p=="") {
+      alert("Name or Password is incomplete !");
+      return false;
+    }  
+    var ps=document.getElementById("psw").value;
+    if (ps=="a@gmail.com") {
+      alert("login Successful");
+    }
+    else{
+      alert("Password Incorrect")
+    }
+    }
+  </script>
+</body>
+</html>

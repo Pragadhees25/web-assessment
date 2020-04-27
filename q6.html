@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<style>
+	#master {
+		width: 350px;
+		height: 35px;
+		padding: 10px;
+		max-width: 500px;
+		border:1px solid black;
+		margin:auto;
+		font-size: 25px;
+		text-align: center;
+		border-radius: 80px/ 11px;
+
+	}
+
+</style>
+<body>
+	<h1><center>My WishMaster</center></h1><br><br>
+<p id="master"></p><br><br>
+<center><input type="text" id="textbox">
+<button onclick="wish()">wish me</button>
+<p id="res"></p></center>
+</body>
+	<script>
+var today = new Date();
+
+var time = "<b>Current Time :</b>" + today.getHours() + ":" + today.getMinutes() ;
+
+document.getElementById("master").innerHTML=time;
+ document.write("<font size=+3>");
+ function wish(){
+ var tb= document.getElementById("textbox").value;
+
+
+        var day = new Date();
+        var hr = day.getHours();
+       
+        if (hr >= 0 && hr < 12) {
+
+        var wh = document.getElementById("res").innerHTML=("Good Morning");
+        } else if (hr == 12) {
+
+         var wh = document.getElementById("res").innerHTML=("Good Noon");
+        } else if (hr >= 12 && hr <= 17) {
+            document.write( "Good Afternoon");
+        } else {
+
+        var wh = document.getElementById("res").innerHTML=("Good Evening");
+        }
+        document.getElementById("res").innerHTML="Hello " + tb + " " + wh;
+   }
+</script>
+</html>
